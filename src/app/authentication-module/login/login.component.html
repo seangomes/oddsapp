@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="container">
+
+    <div>
+      <h1 class="text-center">Login to OddsApp</h1>
+    </div>
+
+    <form>
+      <div class="form-group col-12">
+        <label for="emailform">Email address</label>
+        <input type="email" [(ngModel)]="user.email" name="email" class="form-control" id="emailform" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group col-12">
+        <label for="passwordForm">Password</label>
+        <input type="password" [(ngModel)]="user.password" name="password" class="form-control" id="passwordForm" aria-describedby="emailHelp" placeholder="Enter password">
+      </div>
+      <div class="form-group col-12">
+         <a [routerLink]="['/auth/register']">Register new user</a>
+        </div>
+      <div class="form-group col-12">
+          <button class="btn btn-primary loginBtn" (click)="login()">Login</button>
+        </div>
+    </form>
+  </div>
+
+</div>
