@@ -1,14 +1,15 @@
 
-<div class="row spaceRows" *ngFor="let user of users">
-  <div class="col-2">
-    <img src="https://medizzy.com/_nuxt/img/user-placeholder.d2a3ff8.png" height="30" width="30"/>
+<div class="spaceRows" *ngFor="let user of users">
+  <div class="row container">
+  <div class="col-md-2">
+    <img src="https://medizzy.com/_nuxt/img/user-placeholder.d2a3ff8.png" [class.bgCircleOffline]="user.isOnline === false" [class.bgCircleOnline]="user.isOnline === true" height="50" width="50"/>
   </div>
-  <div class="col-7">
-    {{user.username}}
-    {{user.isOnline}}
-    {{user.email}}
+  <div class="col-md-8">
+      <i class="far fa-user"></i> {{user.username}} <br>
+      <i class="far fa-envelope"></i> {{user.email}}
   </div>
-  <div class="col-3">
-    <button class="btn btn-danger btn-sm" (click)="deleteUser(user)">Delete user</button>
+  <div class="col-md-2">
+    <button class="btn btn-danger float-right" (click)="deleteUser(user)"><i class="far fa-trash-alt"></i></button>
   </div>
+</div>
 </div>

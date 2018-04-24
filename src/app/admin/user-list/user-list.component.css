@@ -1,3 +1,18 @@
 .spaceRows {
   margin: 20px;
 }
+
+.bgCircleOffline {
+  border-radius: 200px;
+ -webkit-border-radius: 200px;
+ -moz-border-radius: 200px;
+  border: 2px solid red;
+}
+
+.bgCircleOnline {
+  border-radius: 200px;
+ -webkit-border-radius: 200px;
+ -moz-border-radius: 200px;
+  border: 2px solid green;
+}
+
