@@ -1,0 +1,26 @@
+
+<!--MENU-->
+<section id="menu-content">
+  <article id="profile-info">
+      <img class="avatar-img overlay" src="https://www.freewebmentor.com/default-avatar.png">
+
+      <h3>{{user?.displayName}}</h3>
+
+      <p>{{user?.email}}</p>
+
+  </article>
+  <ul class="menu">
+      <li routerLink="/admin/news" routerLinkActive="active">
+          <a>
+              <i class="far fa-newspaper menu-icons"></i> News</a>
+      </li>
+      <li routerLink="/admin/users" routerLinkActive="active">
+          <a>
+              <i class="far fa-user menu-icons"></i> Users</a>
+      </li>
+      <li routerLink="/admin/settings" routerLinkActive="active">
+          <a>
+              <i class="far fa-sun menu-icons"></i> Settings</a>
+      </li>
+  </ul>
+</section>

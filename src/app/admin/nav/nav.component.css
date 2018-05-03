@@ -1,0 +1,61 @@
+/* MENU CSS */
+#menu-content {
+    background-color:  #2D3E4F;
+    width: 250px;
+    color: white;
+    height: 100%;
+    
+}
+
+#menu-content h3 {
+    font-size: 15px;
+}
+
+#menu-content p {
+    font-size: 12px;
+}
+
+#menu-content .avatar-img {
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    color:white;
+}
+
+#profile-info {
+    text-align: center;
+}
+
+
+
+
+
+
+.menu {
+    margin-top: 50px;
+    padding: 0px;
+}
+
+.menu li {
+    display: block;
+    padding: 20px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: lightgrey;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    
+}
+
+.menu-icons {
+    margin-right: 15px;
+    color: white;
+}

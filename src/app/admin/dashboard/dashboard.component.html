@@ -1,21 +1,23 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
+<div class="main-container row">
+  
+  
+
+    <!-- <div class="col-md-12">
         <h1 class="text-center">Admin dashboard</h1>
+    </div> -->
+
+    <div class="col-2">
+      <app-nav></app-nav>
+    </div>
+    
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
     </div>
 
-    <div class="col-4">MENU</div>
-    
-
-    <div class="col-md-8">Content</div>
-
-
-    <!---->
-
-    <!-- <div class="col-md-4 userContainer">
-      <app-user-list></app-user-list>
-    </div> -->
-  </div>
+    <div class="col-md-2 userContainer">
+      details
+    </div>
+  
 
 
 
