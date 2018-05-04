@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
-import { AuthService } from '../../core/auth-service/auth.service';
+import { User } from '../../../shared/models/user';
+import { AuthService } from '../../services/auth-service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.user);
     this.authService.login(this.user.email, this.user.password).then((data) => {
       this.resMessage = data;
     });

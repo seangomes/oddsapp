@@ -1,5 +1,5 @@
 
-<div class="spaceRows" *ngFor="let user of users">
+<div class="spaceRows" *ngFor="let user of users | async">
   <div class="row container">
   <div class="col-md-2">
     <img src="https://medizzy.com/_nuxt/img/user-placeholder.d2a3ff8.png" [class.bgCircleOffline]="user.isOnline === false" [class.bgCircleOnline]="user.isOnline === true" height="50" width="50"/>

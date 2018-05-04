@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from "../admin-service/admin.service";
+import { AdminService } from "../../services/admin-service/admin.service";
 import { Observable } from '@firebase/util';
-import { User } from '../../models/user';
+import { User } from '../../../shared/models/user';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { User } from '../../models/user';
 })
 export class UserListComponent implements OnInit {
 
-  private users = [];
+  private users$;
 
   constructor(private adminServie: AdminService) { }
 
@@ -20,7 +21,7 @@ export class UserListComponent implements OnInit {
   }
 
   getUsers() {
-    this.adminServie.getUsers().subscribe(data => this.users = data);
+    this.users$ = this.adminServie.getUsers();
   }
 
   deleteUser(user: User) {

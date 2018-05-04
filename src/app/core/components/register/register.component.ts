@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
-import { AuthService } from '../../core/auth-service/auth.service';
+import { User } from '../../../shared/models/user';
+import { AuthService } from '../../services/auth-service/auth.service';
 
 @Component({
   selector: 'app-register',

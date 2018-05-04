@@ -1,37 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { AngularFireModule } from 'angularfire2';
-import { AdminService } from "./admin-service/admin.service";
-import { NavComponent } from './nav/nav.component';
-import { NewsComponent } from './news/news.component';
-import { SettingsComponent } from './settings/settings.component';
+import { AdminRoutingModule } from './admin-routing.module';
 
-const adminRoutes: Routes = [
-  {
-    path: '', component: DashboardComponent,
-    children: [
-      {path: 'admin/users', component: UserListComponent},
-      {path: 'admin/news', component: NewsComponent},
-      {path: 'admin/settings', component: SettingsComponent},
-    ]
-  }
+//COMPONENTS
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { NavComponent } from './components/nav/nav.component';
+import { NewsComponent } from './components/news/news.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { AdminComponent } from './admin.component';
 
+//SERVICES
+import { AdminService } from "./services/admin-service/admin.service";
 
-
-
-];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(adminRoutes),
-    AngularFireModule
+    AdminRoutingModule
   ],
   exports: [RouterModule],
   providers: [AdminService],
-  declarations: [DashboardComponent, UserListComponent, NavComponent, NewsComponent, SettingsComponent]
+  declarations: [DashboardComponent, UserListComponent, NavComponent, NewsComponent, SettingsComponent, AdminComponent]
 })
 export class AdminModuleModule { }
